@@ -17,13 +17,15 @@ function Describe2(){
   const navigate = useNavigate(); // Hook untuk navigasi
  
 
-    const audio1 = new Audio(soundkey);
-    const audio2 = new Audio(soundkey);
-    const audio3 = new Audio(soundkey);
-    const audio4 = new Audio(soundkey);
-    const audio5 = new Audio(soundkey);
+   
   
     useEffect(() => {
+
+      const audio1 = new Audio(soundkey);
+      const audio2 = new Audio(soundkey);
+      const audio3 = new Audio(soundkey);
+      const audio4 = new Audio(soundkey);
+      const audio5 = new Audio(soundkey);
 
         audio1.play();
         setTimeout(() => {
