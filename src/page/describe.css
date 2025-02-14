@@ -1,3 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
 .container_describe{
     width: 100%;
     height: 100vh;
@@ -25,6 +31,10 @@
     height: 100vh;
     background-color: #578FCA;
 
+}
+
+.flex{
+    display: flex;
 }
 
 .profile{
@@ -129,4 +139,74 @@
     display: flex;
     gap: 20px;
     justify-content: center;
+}
+
+.container_question{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bingkai_quetion{
+    width: 300px;
+    height: 300px;
+    border: 2px solid #EFE9D5;
+    border-radius: 20px;
+    background-color: #F8F5E9;
+    /* text-align: center; */
+    padding: 20px;
+}
+
+.container_jawab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.click{
+    cursor: pointer;
+}
+
+
+
+
+.container_correct_image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-200px)translateX(300px);
+    animation: slideInFromRight 4s  infinite; /* Durasi animasi 0.8s */
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform:  translateY(-200px)translateX(300px); /* Mulai dari luar layar (kanan) */
+    }
+    to {
+        transform:  translateY(-200px)translateX(-350px); /* Berhenti di posisi normal */
+    }
+}
+
+.deserDikit{
+    margin-left: 17px;
+}
+
+
+
+
+
+.correct_img{
+    width: 150px;
+}
+
+.span_correct{
+    border: 2px solid #EFE9D5;
+    border-radius: 10px;
+    width: fit-content; 
+    padding: 10px;
+    height: fit-content;
+    background-color: #F8F5E9;
 }

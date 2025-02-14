@@ -4,6 +4,7 @@ import she from './assets/she.gif';
 import soundkey from "../home/assets/keyboard.mp3";
 
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Describe3() {
   const [show34, setShow34] = useState(false);
@@ -14,6 +15,8 @@ function Describe3() {
   const [showSecondOptions, setShowSecondOptions] = useState(false);
   const [secondReply, setSecondReply] = useState(null);
   const [finalMessage, setFinalMessage] = useState(null);
+  const [showFinalButton, setShowFinalButton] = useState(false);
+  const navigate = useNavigate();
 
   const audio1 = useRef(new Audio(soundkey));
   const audio2 = useRef(new Audio(soundkey));
@@ -78,8 +81,16 @@ function Describe3() {
 
     setTimeout(() => {
       setFinalMessage("Kalo mau hadiah tapi ada syaratnya nih!");
+      setShowFinalButton(true);
     }, 2000);
   };
+
+
+  const handleEnterClick2 = () => {
+    navigate("/describe4"); 
+  };
+
+
 
   return (
     <div className="container_descirbe3">
@@ -212,6 +223,14 @@ function Describe3() {
             </div>
           </div>
         )}
+
+      {showFinalButton && (
+        <div className="container_enter_button_d3">
+          <button 
+          className="enter_button" 
+          onClick={handleEnterClick2}>Lanjue</button>
+        </div>
+      )}
      
 
 
